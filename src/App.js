@@ -67,7 +67,9 @@ class App extends Component {
       <p className="course-mark">{course.mark}</p>
       <p className="course-code">{course.code}</p>
       <p className="course-room">{"Room: " + course.room}</p>
+      <p className="course-overall-mark">{course.overall_mark ? course.overall_mark : "Grade Not Open"}</p>
       <p className="course-overall-mark">{"Overal Mark: " + course.overall_mark + "%"}</p>
+
       
               
 
