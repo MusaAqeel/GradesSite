@@ -55,10 +55,10 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1>Teach Assist V2</h1>
-          <h3>Created by Musa Aqeel, Erin Tomorri, Sibel Jahangirli, Pearl Natalia and Daniel Martinez </h3>
+          <h3></h3>
         </header>
         {isLoggedIn ? (
-          <div className="course-info" style={{ color: "green", fontSize: "16px" }}>
+          <div className="course-info" style={{ color: "#035337", fontSize: "16px" }}>
           <h2>Courses</h2>
             {courses.map((course) => (
               <div key={course.code}>
