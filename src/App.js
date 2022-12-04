@@ -62,10 +62,13 @@ class App extends Component {
             {courses.map((course) => (
               <div key={course.code}>
                 <h3>{course.name}</h3>
+                <p>{course.teacher}</p>
+                <p>{course.mark}</p>
                 <p>{course.code}</p>
                 <p>{course.teacher}</p>
                 <p>{course.mark}</p>
                 
+                <p>{course.overall_mark}</p>
                 <p>{course.overall_mark}</p>
               </div>
             ))}
