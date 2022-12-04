@@ -98,13 +98,15 @@
   padding: 20px;
 }
 
-/*create css for the course-info*/
-.course-info{
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
+.course-name {
+  color: red;
+}
+.course-teacher {
+  color: green;
+}
+.course-mark {
+  color: blue;
 }
 
-/*create css for the course-info*/
+
 
