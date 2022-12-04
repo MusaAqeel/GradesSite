@@ -115,13 +115,13 @@
   flex-direction: column;
   gap: 20px;
   height: 100vh;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif, Arial, Helvetica, sans-serif;
   background-color: #2e2e2e;
 }
 
 input[type="text"],
 input[type="password"] {
-  height: 10px;
+  height: 8px;
   border: 2px solid rgba(0, 0, 0, 0.2);
   padding: 10px 20px;
   border-radius: 5px; 
@@ -130,7 +130,7 @@ input[type="password"] {
 input[type="submit"] {
   margin-top: 10px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 8px;
   background: #555555;
   border: 1px solid #ffffff;
   color: rgb(255, 255, 255);
