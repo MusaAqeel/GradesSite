@@ -99,10 +99,10 @@
 }
 
 .course-name {
-  color: rgb(191, 180, 180);
+  color: rgb(54, 54, 54);
 }
 .course-teacher {
-  color: green;
+  color: rgb(0, 0, 0);
 }
 .course-mark {
   color: blue;
