@@ -54,7 +54,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Teach Assist</h1>
+          <h1>Teach Assist, but better</h1>
         </header>
         {isLoggedIn ? (
           <div>
@@ -83,6 +83,7 @@ class App extends Component {
                 <input
                   type="password"
                   name="password"
+              
                   value={this.state.password}
                   onChange={this.handleChange}
                 />
