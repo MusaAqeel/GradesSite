@@ -33,6 +33,7 @@ class App extends Component {
         password: this.state.password,
       }),
     })
+
       .then((res) => res.json())
       .then((data) => {
         this.setState({
@@ -49,6 +50,7 @@ class App extends Component {
       });
   };
 
+  // Render the component
   render() {
     const { isLoggedIn, isLoading, error, courses } = this.state;
     return (
@@ -64,7 +66,7 @@ class App extends Component {
               <div key={course.code}>
       <h3 className="course-name">{course.name}</h3>
       <p className="course-teacher">{course.teacher}</p>
-      <p className="course-mark">{course.mark}</p>
+
       <p className="course-code">{course.code}</p>
       <p className="course-room">{"Room: " + course.room}</p>
       <p className="course-overall-mark">{course.overall_mark ? course.overall_mark : "Grade Not Open"}</p>
@@ -72,8 +74,6 @@ class App extends Component {
 
       
               
-
-
               </div>
             ))}
           </div>
