@@ -69,6 +69,24 @@ class App extends Component {
       <p className="course-room">{course.room}</p>
       <p className="course-overall-mark">{course.overall_mark}</p>
               
+      // JSX code for login form
+  const renderForm = (
+    <div className="form">
+      <form onSubmit={handleSubmit}>
+        <div className="input-container">
+          <label>Username </label>
+          <input type="text" name="uname" required />
+        </div>
+        <div className="input-container">
+          <label>Password </label>
+          <input type="password" name="pass" required />
+        </div>
+        <div className="button-container">
+          <input type="submit" />
+        </div>
+      </form>
+    </div>
+  );
 
               </div>
             ))}
