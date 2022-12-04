@@ -64,10 +64,11 @@ class App extends Component {
               <div key={course.code}>
       <h3 className="course-name">{course.name}</h3>
       <p className="course-teacher">{course.teacher}</p>
-      <p className="course-mark">{course.mark}</p>
+      <p className="course-mark">{"mark" + course.mark}</p>
       <p className="course-code">{course.code}</p>
       <p className="course-room">{course.room}</p>
       <p className="course-overall-mark">{course.overall_mark}</p>
+      
               
 
 
