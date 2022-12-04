@@ -121,7 +121,7 @@
 
 input[type="text"],
 input[type="password"] {
-  height: 25px;
+  height: 10px;
   border: 2px solid rgba(0, 0, 0, 0.2);
   padding: 10px 20px;
   border-radius: 5px; 
