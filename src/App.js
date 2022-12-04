@@ -1,5 +1,7 @@
+
 import React, { Component } from 'react';
 import './App.css';
+import axios from 'axios';
 
 class App extends Component {
   constructor(props) {
@@ -7,93 +9,83 @@ class App extends Component {
     this.state = {
       username: '',
       password: '',
-      courses: [],
-      isLoggedIn: false,
+      grades: [],
       isLoading: false,
       error: null,
     };
   }
 
-  handleChange = (event) => {
+  handleChange = event => {
     this.setState({
       [event.target.name]: event.target.value,
     });
   };
 
-  handleSubmit = (event) => {
+  handleSubmit = event => {
     event.preventDefault();
     this.setState({ isLoading: true });
-    fetch('https://api.pegasis.site/public/yrdsb_ta/getmark_v2', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        number: this.state.username,
-        password: this.state.password,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
+    axios
+      .get(
+        `https://api.pegasis.site/public/yrdsb_ta/grades?username=${this.state.username}&password=${this.state.password}`
+      )
+      .then(result => {
         this.setState({
-          courses: data,
-          isLoggedIn: true,
+          grades: result.data,
           isLoading: false,
         });
       })
-      .catch((error) => {
-        this.setState({
-          error,
-          isLoading: false,
-        });
-      });
+      .catch(error => this.setState({ error, isLoading: false }));
   };
 
   render() {
-    const { isLoggedIn, isLoading, error, courses } = this.state;
+    const { isLoading, grades, error } = this.state;
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1>Teach Assist</h1>
-        </header>
-        {isLoggedIn ? (
-          <div>
-            <h2>Courses</h2>
-            {courses.map((course) => (
-              <div key={course.code}>
-                <h3>{course.name}</h3>
-                <p>{course.overall_mark}</p>
+      <React.Fragment>
+        <form onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            value={this.state.username}
+            onChange={this.handleChange}
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={this.state.password}
+            onChange={this.handleChange}
+          />
+          <button type="submit">Submit</button>
+        </form>
+        {error ? <p>{error.message}</p> : null}
+        {!isLoading ? (
+          grades.map(grade => {
+            const {
+              course_code,
+              course_name,
+              course_type,
+              course_teacher,
+              course_mark,
+              course_percent,
+              course_grade,
+            } = grade;
+            return (
+              <div key={course_code}>
+                <p>Course Code: {course_code}</p>
+                <p>Course Name: {course_name}</p>
+                <p>Course Type: {course_type}</p>
+                <p>Course Teacher: {course_teacher}</p>
+                <p>Course Mark: {course_mark}</p>
+                <p>Course Percent: {course_percent}</p>
+                <p>Course Grade: {course_grade}</p>
               </div>
-            ))}
-          </div>
+            );
+          })
         ) : (
-          <div>
-            <form onSubmit={this.handleSubmit}>
-              <label>
-                Username:
-                <input
-                  type="text"
-                  name="username"
-                  value={this.state.username}
-                  onChange={this.handleChange}
-                />
-              </label>
-              <label>
-                Password:
-                <input
-                  type="password"
-                  name="password"
-                  value={this.state.password}
-                  onChange={this.handleChange}
-                />
-              </label>
-              <input type="submit" value="Submit" />
-            </form>
-            {error ? <p>{error.message}</p> : null}
-            {isLoading ? <p>Loading...</p> : null}
-          </div>
+          <h3>Loading...</h3>
         )}
-      </div>
+      </React.Fragment>
     );
   }
 }
