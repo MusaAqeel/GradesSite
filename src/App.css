@@ -170,6 +170,31 @@ input[type="submit"]:hover {
   gap: 8px;
   margin: 10px;
 }
+.course-name
+{
+  color: rgb(54, 54, 54);
+}
+.course-teacher
+{
+  color: rgb(0, 0, 0);
+}
+.course-mark
+{
+  color: blue;
+}
+.app
+{
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #2e2e2e;
+}
+
 
 
 
