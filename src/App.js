@@ -57,7 +57,7 @@ class App extends Component {
           <h1>Teach Assist V2</h1>
         </header>
         {isLoggedIn ? (
-          <div className="course-info" style={{ color: "red", fontSize: "16px" }}>
+          <div className="course-info" style={{ color: "green", fontSize: "16px" }}>
           <h2>Courses</h2>
             {courses.map((course) => (
               <div key={course.code}>
