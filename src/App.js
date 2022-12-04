@@ -59,22 +59,24 @@ class App extends Component {
         </header>
         {isLoggedIn ? (
           <div className="course-info" style={{ color: "#035337", fontSize: "16px" }}>
-  <h2>Courses</h2>
-  {courses.map((course) => (
-    <div key={course.code}>
+          <h2>Courses</h2>
+            {courses.map((course) => (
+              <div key={course.code}>
       <h3 className="course-name">{course.name}</h3>
       <p className="course-teacher">{course.teacher}</p>
-      <p className="course-mark">{course.mark ? course.mark : "Grade Not Open"}</p>
+      <p className="course-mark">{course.mark}</p>
       <p className="course-code">{course.code}</p>
       <p className="course-room">{"Room: " + course.room}</p>
-      {course.overall_mark === "null" ? (
-        <p className="course-overall-mark">{course.overall_mark ? course.overall_mark : "Grade Not Open"}</p>
-      ) : (
-        <p className="course-overall-mark">{"Overall Mark: " + course.overall_mark + "%"}</p>
-      )}
-    </div>
-  ))}
-</div>
+      <p className="course-overall-mark">{course.overall_mark ? course.overall_mark : "Grade Not Open"}</p>
+      <p className="course-overall-mark">{"Overal Mark: " + course.overall_mark + "%"}</p>
+
+      
+              
+
+
+              </div>
+            ))}
+          </div>
           ) : (
           <div>
             <form onSubmit={this.handleSubmit}>
