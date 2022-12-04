@@ -57,8 +57,8 @@ class App extends Component {
           <h1>Teach Assist V2</h1>
         </header>
         {isLoggedIn ? (
-          <div>
-            <h2>Courses</h2>
+          <div className="course-info">
+          <h2>Courses</h2>
             {courses.map((course) => (
               <div key={course.code}>
                 <h3>{course.name}</h3>
@@ -75,7 +75,7 @@ class App extends Component {
               </div>
             ))}
           </div>
-        ) : (
+          ) : (
           <div>
             <form onSubmit={this.handleSubmit}>
               <label>
