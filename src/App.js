@@ -70,7 +70,8 @@ class App extends Component {
           <div className="course-info" >
             <h2>Courses</h2>
             {courses.map((course) => (
-              <div key={course.code}>
+              /* Add the grade-box class to the <div> element */
+              <div key={course.code} className="grade-box">
                 <h3 className="course-name" style={{fontWeight: "bold"}}>{course.name || "Course"}</h3>
                 <p className="course-teacher" style={{color: "gray"}}>{course.teacher}</p>
                 <p className="course-mark" style={{color: "blue"}}>{course.mark}</p>
