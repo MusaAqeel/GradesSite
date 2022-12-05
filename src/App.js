@@ -55,7 +55,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Teach Assist V2</h1>
+          <h1 className="title">Teach Assist V2</h1>
           <h3></h3>
         </header>
         {isLoggedIn ? (
@@ -68,36 +68,51 @@ class App extends Component {
                 <p className="course-mark">{course.mark}</p>
                 <p className="course-code">{course.code}</p>
                 <p className="course-room">{"Room: " + course.room}</p>
-                {course.overall_mark ? (
-                  <p className="course-overall-mark">{`Overall Mark: ${course.overall_mark}%`}</p>
-                ) : (
+  
+                {course.overall_mark ?
+                  <p className="course-overall-mark">{`Overall Mark: ${course.overall_mark}%`}</p> :
                   <p className="course-overall-mark">{`Grade Not Open for ${course.name || "Course"}`}</p>
-                )}
+                }
               </div>
             ))}
           </div>
-          ) : (
-            <div className="login-form">
-              <form onSubmit={this.handleSubmit}>
-                <div className="form-field">
-                  <input type="text" id="username" name="username" value={this.state.username} onChange={this.handleChange} required />
-                  <label htmlFor="username">Username</label>
-                </div>
-                <div className="form-field">
-                  <input type="password" id="password" name="password" value={this.state.password} onChange={this.handleChange} required />
-                  <label htmlFor="password">Password</label>
-                </div>
-                <div className="button-container">
-                  <input type="submit" value="Submit" />
-                </div>
-              </form>
-              {error ? <p>{error.message}</p> : null}
-              {isLoading ? <p>Loading...</p> : null}
-            </div>
-          )}
-        </div>
-      );
-    }
+        ) : (
+          <div className="login-form">
+            <form onSubmit={this.handleSubmit}>
+              <div className="form-field">
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  value={this.state.username}
+                  onChange={this.handleChange}
+                  required
+                />
+                <label htmlFor="username">Username</label>
+              </div>
+              <div className="form-field">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  value={this.state.password}
+                  onChange={this.handleChange}
+                  required
+                />
+                <label htmlFor="password">Password</label>
+              </div>
+              <div className="button-container">
+                <input type="submit" value="Submit" />
+              </div>
+            </form>
+            {error ? <p>{error.message}</p> : null}
+            {isLoading ? <p>Loading...</p> : null}
+          </div>
+        )}
+      </div>
+    );
+  }
+  
   }
   
   export default App;

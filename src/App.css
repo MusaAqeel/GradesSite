@@ -40,6 +40,14 @@
   }
 }
 
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  margin: 0 auto;
+}
+
 /*create css for the input bpox*/
 .inputBox {
   width: 100%;
@@ -152,8 +160,9 @@ input[type="submit"]:hover {
 }
 
 .form-field {
-  margin: 10px 0;
-  text-align: center;
+  position: relative;
+  top: -50px;
+  margin: 0 auto;
 }
 
 .form-field input[type="text"],
