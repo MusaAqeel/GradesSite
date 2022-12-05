@@ -97,9 +97,10 @@ class App extends Component {
                   onChange={this.handleChange}
                   required
                 />
-                <label htmlFor="username">Username</label>
+
               </div>
               <div className="form-field">
+              <label htmlFor="password">Password</label>
                 <input
                   type="password"
                   id="password"
@@ -108,7 +109,7 @@ class App extends Component {
                   onChange={this.handleChange}
                   required
                 />
-                <label htmlFor="password">Password</label>
+
               </div>
               <div className="button-container">
                 <input type="submit" value="Submit" />
