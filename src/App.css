@@ -149,7 +149,7 @@ input[type="submit"]:hover {
 }
 
 .login-form {
-  max-width: 100px%;
+  max-width: 100px;
   align-items: center;
 
   background-color: rgb(143, 143, 143);
