@@ -71,16 +71,14 @@ class App extends Component {
             <h2>Courses</h2>
             {courses.map((course) => (
               <div key={course.code}>
-                <h3 className="course-name">{course.name || "Course"}</h3>
-                <p className="course-teacher">{course.teacher}</p>
-                <p className="course-mark">{course.mark}</p>
-                <p className="course-code">{course.code}</p>
-                <p className="course-room">{"Room: " + course.room}</p>
-   
+                <h3 className="course-name" style={{fontWeight: "bold"}}>{course.name || "Course"}</h3>
+                <p className="course-teacher" style={{color: "gray"}}>{course.teacher}</p>
+                <p className="course-mark" style={{color: "blue"}}>{course.mark}</p>
+                <p className="course-code" style={{fontStyle: "italic"}}>{course.code}</p>
+                <p className="course-room" style={{fontWeight: "bold"}}>{"Room: " + course.room}</p>
                 {course.overall_mark ?
-                  <p className="course-overall-mark">{`Overall Mark: ${course.overall_mark}%`}</p> :
-                  <p className="course-overall-mark">{`Grade Not Open for ${course.name || "Course"}`}</p>
-                  
+                  <p className="course-overall-mark" style={{fontWeight: "bold"}}>{`Overall Mark: ${course.overall_mark}%`}</p> :
+                  <p className="course-overall-mark" style={{fontWeight: "bold"}}>{`Grade Not Open for ${course.name || "Course"}`}</p>
                 }
               </div>
             ))}
