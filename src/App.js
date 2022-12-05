@@ -55,7 +55,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="title">Teach Assist V2</h1>
+          <h1 className="title">GradesSite</h1>
           <h3></h3>
         </header>
         {isLoggedIn ? (
