@@ -225,11 +225,11 @@ input[type="submit"]:hover {
 }
 
 
-@font-face {
+.font-face {
 
   font-family: "MagdaCleanBlack";
 
-  src: url("../fonts/MagdaCleanBlack.ttf") format("truetype");
+  src: url("./MagdaCleanBlack.ttf") format("truetype");
   font-style: normal;
 }
 
