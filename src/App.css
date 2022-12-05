@@ -82,7 +82,7 @@
 
 /*create css for the form*/
 
-form {
+.form {
   background: radial-gradient(circle, #fff 20%, transparent 20%),
               radial-gradient(circle, #fff 20%, transparent 20%);
   background-position: 0 0, 10px 10px;
