@@ -70,19 +70,30 @@ class App extends Component {
           <div className="course-info" >
             <h2>Courses</h2>
             {courses.map((course) => (
-              <div key={course.code}>
-                <h3 className="course-name">{course.name || "Course"}</h3>
-                <p className="course-teacher">{course.teacher}</p>
-                <p className="course-mark">{course.mark}</p>
-                <p className="course-code">{course.code}</p>
-                <p className="course-room">{"Room: " + course.room}</p>
+  <div key={course.code}>
+    <h3 className="course-name">{course.name || "Course"}</h3>
 
-                {course.overall_mark ?
-                  <p className="course-overall-mark">{`Overall Mark: ${course.overall_mark}%`}</p> :
-                  <p className="course-overall-mark">{`Grade Not Open for ${course.name || "Course"}`}</p>
-                }
-              </div>
-            ))}
+    <select onChange={() => { /* handle change event here */ }}>
+      <option value="">Select a course to view details</option>
+      <option value={course.code}>{course.name}</option>
+    </select>
+
+    {/* Show course details when a course is selected from the dropdown menu */}
+    {selectedCourse === course.code && (
+      <div>
+        <p className="course-teacher">{course.teacher}</p>
+        <p className="course-mark">{course.mark}</p>
+        <p className="course-code">{course.code}</p>
+        <p className="course-room">{"Room: " + course.room}</p>
+
+        {course.overall_mark ?
+          <p className="course-overall-mark">{`Overall Mark: ${course.overall_mark}%`}</p> :
+          <p className="course-overall-mark">{`Grade Not Open for ${course.name || "Course"}`}</p>
+        }
+      </div>
+    )}
+  </div>
+))}
           </div>
         ) : (
           <div className="login-form">
