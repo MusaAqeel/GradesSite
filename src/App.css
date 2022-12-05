@@ -41,7 +41,7 @@
 }
 
 /*create css for the input bpox*/
-.inputBox{
+.inputBox {
   width: 100%;
   height: 50px;
   border: 1px solid #ccc;
@@ -52,7 +52,7 @@
 }
 
 /*create css for the button*/
-.button{
+.button {
   width: 100%;
   height: 50px;
   border: none;
@@ -64,7 +64,7 @@
 }
 
 /*create css for the output box*/
-.outputBox{
+.outputBox {
   width: 100%;
   height: 50px;
   border: 1px solid #ccc;
@@ -76,7 +76,7 @@
 
 /*create css for the container*/
 
-.container{
+.container {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
@@ -90,18 +90,21 @@
               radial-gradient(circle, #fff 20%, transparent 20%);
   background-position: 0 0, 10px 10px;
   background-size: 20px 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .course-name {
   color: rgb(54, 54, 54);
 }
+
 .course-teacher {
   color: rgb(0, 0, 0);
 }
+
 .course-mark {
   color: blue;
 }
+
 .app {
   font-family: sans-serif;
   display: flex;
@@ -110,7 +113,8 @@
   flex-direction: column;
   gap: 20px;
   height: 100vh;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif, Arial, Helvetica, sans-serif;
+  font-family: Cambria, Cochin
+
   background-color: #2e2e2e;
 }
 
