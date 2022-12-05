@@ -84,9 +84,6 @@ class App extends Component {
                 }
               </div>
             ))}
-               {/* Compute and display average mark */}
-    <p>Average mark: {totalMarks / courses.length}%</p>
-    
           </div>
         ) : (
           <div className="login-form">
