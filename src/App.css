@@ -159,10 +159,19 @@ input[type="submit"]:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.form-field {
-  position: relative;
-  top: -50px;
-  margin: 0 auto;
+.form-field::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, #fff 20%, transparent 20%),
+              radial-gradient(circle, #fff 20%, transparent 20%);
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transform: translate(-50%, -50%);
 }
 
 .form-field input[type="text"],
