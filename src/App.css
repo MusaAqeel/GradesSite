@@ -152,10 +152,9 @@ input[type="submit"]:hover {
 }
 
 .form-field {
-  position: relative;
-  top: -50px;
+  margin: 10px 0;
+  text-align: center;
 }
-
 
 .form-field input[type="text"],
 .form-field input[type="password"] {
