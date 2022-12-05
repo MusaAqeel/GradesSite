@@ -220,14 +220,11 @@ input[type="submit"]:hover {
   color: #000000;
 }
 
-
 .grade-box {
   border: 1px solid rgb(255, 255, 255);
   border-radius: 5px;
   padding: 10px;
-  /* Set the width and height of the box */
-  width: 200px;
-  height: 200px;
+  
 }
 
 
