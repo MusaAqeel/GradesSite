@@ -93,7 +93,7 @@ class App extends Component {
       </div>
     )}
   </div>
-))}
+            ))}
           </div>
         ) : (
           <div className="login-form">
