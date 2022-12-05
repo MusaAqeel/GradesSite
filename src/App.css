@@ -139,8 +139,10 @@ input[type="submit"] {
   background: #555555;
   border: 1px solid #ffffff;
   color: rgb(255, 255, 255);
+  width: 100px;
+  height: 30px;
   padding: 10px 20px;
-  border-radius: 5px; 
+  border-radius: 2px; 
 }
 
 
