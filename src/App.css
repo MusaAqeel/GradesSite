@@ -119,7 +119,7 @@ body {
   flex-direction: column;
   gap: 20px;
   height: 100vh;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif, Arial, Helvetica, sans-serif;
+  font-family: MagdaClean Black;
   background-color:  rgb(3.1, 1.6, 1.6);
 }
 
@@ -184,7 +184,7 @@ input[type="submit"]:hover {
   box-sizing: border-box;
   width: 100%;
   height: 30px;
-  font-family: Arial, Helvetica, Verdana;
+  font-family: MagdaClean Black;
   font-size: 16px;
   padding: 8px 16px;
   border-radius: px;
@@ -222,4 +222,11 @@ input[type="submit"]:hover {
   border: 1px solid rgb(255, 255, 255);
   border-radius: 5px;
   padding: 10px;
+}
+
+
+@font-face {
+  font-family: "MagdaClean Black.ttf";
+  src: url("..src/fonts/MagdaClean Black.ttf") format("truetype");
+  font-style: normal;
 }
