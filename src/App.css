@@ -130,13 +130,15 @@ input[type="submit"] {
   margin-top: 10px;
   cursor: pointer;
   font-size: 8px;
-  background: #555555;
 
+  /* New gradient styles */
+  background: linear-gradient(to bottom, #0000FF, #5555FF);
   color: rgb(255, 255, 255);
 
   padding: 10px 20px;
   border-radius: 4px; 
 }
+
 
 
 input[type="submit"]:hover {
