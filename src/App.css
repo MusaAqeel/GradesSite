@@ -14,14 +14,14 @@
 }
 
 .App-header {
-  background-color: white;
+  background-color: gray;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
   padding: 20px; /* Add padding to create space around the text */
 }
 
@@ -40,7 +40,13 @@
   }
 }
 
-
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  margin: 0 auto;
+}
 
 /*create css for the input bpox*/
 .inputBox {
@@ -153,10 +159,19 @@ input[type="submit"]:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.form-field {
-  position: relative;
-  top: -50px;
-  margin: 0 auto;
+.form-field{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, #fff 20%, transparent 20%),
+              radial-gradient(circle, #fff 20%, transparent 20%);
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transform: translate(-50%, -50%);
 }
 
 .form-field input[type="text"],
