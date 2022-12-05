@@ -149,6 +149,8 @@ input[type="submit"]:hover {
 }
 
 .login-form {
+  max-width: 40%;
+
   background-color: rgb(143, 143, 143);
   padding: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
