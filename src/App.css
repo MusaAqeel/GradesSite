@@ -13,7 +13,7 @@ body {
 
 .course-info {
   font-size: calc(10px + 2vmin); /* alt 16 */
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 
@@ -83,7 +83,7 @@ body {
 /*create css for the container*/
 
 .container {
-  background-color: rgb(3.1, 1.6, 1.6);
+  background-color: rgb(124, 124, 124);
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
