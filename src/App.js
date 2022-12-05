@@ -76,7 +76,7 @@ class App extends Component {
                 <p className="course-mark">{course.mark}</p>
                 <p className="course-code">{course.code}</p>
                 <p className="course-room">{"Room: " + course.room}</p>
-  
+   
                 {course.overall_mark ?
                   <p className="course-overall-mark">{`Overall Mark: ${course.overall_mark}%`}</p> :
                   <p className="course-overall-mark">{`Grade Not Open for ${course.name || "Course"}`}</p>
@@ -88,6 +88,7 @@ class App extends Component {
           <div className="login-form">
             <form onSubmit={this.handleSubmit}>
               <div className="form-field">
+              <label htmlFor="username">Username</label>
                 <input
                   type="text"
                   id="username"
