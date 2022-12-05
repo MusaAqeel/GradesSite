@@ -90,7 +90,7 @@
 }
 
 .course-name {
-  color: rgb(54, 54, 54);
+  color: rgb(3, 3, 3);
 }
 
 .course-teacher {
@@ -115,7 +115,7 @@
 input[type="text"],
 input[type="password"] {
   height: 8px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.579);
   padding: 10px 20px;
   border-radius: 5px; 
 }
@@ -134,7 +134,7 @@ input[type="submit"] {
 
 
 input[type="submit"]:hover {
-  background: #035337;
+  background: #434444;
 }
 
 .button-container {
