@@ -225,7 +225,7 @@ input[type="submit"]:hover {
 }
 
 
-.font-face {
+@font-face {
 
   font-family: "MagdaCleanBlack";
 
