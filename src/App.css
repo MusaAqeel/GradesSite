@@ -152,6 +152,7 @@ input[type="submit"]:hover {
   background-color: rgb(143, 143, 143);
   padding: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
 }
 .form-field::before {
   content: "";
