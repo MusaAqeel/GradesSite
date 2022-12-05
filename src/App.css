@@ -164,7 +164,6 @@ input[type="submit"]:hover {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
   background: radial-gradient(circle, #fff 20%, transparent 20%),
               radial-gradient(circle, #fff 20%, transparent 20%);
   background-position: 0 0, 10px 10px;
