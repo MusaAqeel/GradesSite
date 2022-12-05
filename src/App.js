@@ -64,14 +64,17 @@ class App extends Component {
           <h2>Courses</h2>
             {courses.map((course) => (
               <div key={course.code}>
-      <h3 className="course-name">{course.name}</h3>
-      <p className="course-teacher">{course.teacher}</p>
-      <p className="course-mark">{course.mark}</p>
-      <p className="course-code">{course.code}</p>
-      <p className="course-room">{"Room: " + course.room}</p>
-      <p className="course-overall-mark">{course.overall_mark ? course.overall_mark : "Grade Not Open"}</p>
-      <p className="course-overall-mark">{"Overal Mark: " + course.overall_mark + "%"}</p>
-
+              <h3 className="course-name">{course.name || "Course"}</h3>
+              <p className="course-teacher">{course.teacher}</p>
+              <p className="course-mark">{course.mark}</p>
+              <p className="course-code">{course.code}</p>
+              <p className="course-room">{"Room: " + course.room}</p>
+              
+              {course.overall_mark ?
+                <p className="course-overall-mark">{`Overall Mark: ${course.overall_mark}%`}</p> :
+                <p className="course-overall-mark">{`Grade Not Open for ${course.name || "Course"}`}</p>
+              }
+              
       
               
               </div>
