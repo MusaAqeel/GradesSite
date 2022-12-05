@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -34,7 +33,6 @@ class App extends Component {
         password: this.state.password,
       }),
     })
-
       .then((res) => res.json())
       .then((data) => {
         this.setState({
@@ -62,55 +60,44 @@ class App extends Component {
         </header>
         {isLoggedIn ? (
           <div className="course-info" style={{ color: "#035337", fontSize: "16px" }}>
-          <h2>Courses</h2>
+            <h2>Courses</h2>
             {courses.map((course) => (
               <div key={course.code}>
-              <h3 className="course-name">{course.name || "Course"}</h3>
-              <p className="course-teacher">{course.teacher}</p>
-              <p className="course-mark">{course.mark}</p>
-              <p className="course-code">{course.code}</p>
-              <p className="course-room">{"Room: " + course.room}</p>
-              
-              {course.overall_mark ?
-                <p className="course-overall-mark">{`Overall Mark: ${course.overall_mark}%`}</p> :
-                <p className="course-overall-mark">{`Grade Not Open for ${course.name || "Course"}`}</p>
-              }
-              
-      
-              
+                <h3 className="course-name">{course.name || "Course"}</h3>
+                <p className="course-teacher">{course.teacher}</p>
+                <p className="course-mark">{course.mark}</p>
+                <p className="course-code">{course.code}</p>
+                <p className="course-room">{"Room: " + course.room}</p>
+                {course.overall_mark ? (
+                  <p className="course-overall-mark">{`Overall Mark: ${course.overall_mark}%`}</p>
+                ) : (
+                  <p className="course-overall-mark">{`Grade Not Open for ${course.name || "Course"}`}</p>
+                )}
               </div>
             ))}
           </div>
           ) : (
-          <div>
-            <form onSubmit={this.handleSubmit}>
-              <label>
-                Username:
-                <input
-                  type="text"
-                  name="username"
-                  value={this.state.username}
-                  onChange={this.handleChange}
-                />
-              </label>
-              <label>
-                Password:
-                <input
-                  type="password"
-                  name="password"
-                  value={this.state.password}
-                  onChange={this.handleChange}
-                />
-              </label>
-              <input type="submit" value="Submit" />
-            </form>
-            {error ? <p>{error.message}</p> : null}
-            {isLoading ? <p>Loading...</p> : null}
-          </div>
-        )}
-      </div>
-    );
+            <div className="login-form">
+              <form onSubmit={this.handleSubmit}>
+                <div className="form-field">
+                  <input type="text" id="username" name="username" value={this.state.username} onChange={this.handleChange} required />
+                  <label htmlFor="username">Username</label>
+                </div>
+                <div className="form-field">
+                  <input type="password" id="password" name="password" value={this.state.password} onChange={this.handleChange} required />
+                  <label htmlFor="password">Password</label>
+                </div>
+                <div className="button-container">
+                  <input type="submit" value="Submit" />
+                </div>
+              </form>
+              {error ? <p>{error.message}</p> : null}
+              {isLoading ? <p>Loading...</p> : null}
+            </div>
+          )}
+        </div>
+      );
+    }
   }
-}
-
-export default App;
+  
+  export default App;
