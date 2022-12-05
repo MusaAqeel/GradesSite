@@ -57,8 +57,9 @@ class App extends Component {
       });
   };
 
+  // Render the component
   render() {
-    const { isLoggedIn, isLoading, error, courses, selectedCourse } = this.state;
+    const { isLoggedIn, isLoading, error, courses } = this.state;
     return (
       <div className="App">
         <header className="App-header">
@@ -71,27 +72,14 @@ class App extends Component {
             {courses.map((course) => (
               <div key={course.code}>
                 <h3 className="course-name">{course.name || "Course"}</h3>
-  
-                {/* Add the select element with an onChange event handler */}
-                <select onChange={this.handleSelect}>
-                  <option value="">Select a course to view details</option>
-                  <option value={course.code}>{course.name}</option>
-                </select>
-  
-                {/* Show course details when a course is selected from the dropdown menu */}
-                {selectedCourse === course.code && (
-                  <div>
-                    <p className="course-teacher">{course.teacher}</p>
-                    <p className="course-mark">{course.mark}</p>
-                    <p className="course-code">{course.code}</p>
-                    <p className="course-room">{"Room: " + course.room}</p>
-  
-                    {course.overall_mark ?
-                      <p className="course-overall-mark">{`Overall Mark: ${course.overall_mark}%`}</p> :
-                      <p className="course-overall-mark">{`Grade Not Open for ${course.name || "Course"}`}</p>
-                    }
-                  </div>
-                )}
+                <p className="course-teacher">{course.teacher}</p>
+                <p className="course-mark">{course.mark}</p>
+                <p className="course-code">{course.code}</p>
+                <p className="course-room">{"Room: " + course.room}</p>
+                {course.overall_mark ?
+                  <p className="course-overall-mark">{`Overall Mark: ${course.overall_mark}%`}</p> :
+                  <p className="course-overall-mark">{`Grade Not Open for ${course.name || "Course"}`}</p>
+                }
               </div>
             ))}
           </div>
@@ -121,17 +109,16 @@ class App extends Component {
                 <label htmlFor="password">Password</label>
               </div>
               <div className="button-container">
-                <input type="submit" value="Login" />
+                <input type="submit" value="Submit" />
               </div>
             </form>
+            {error ? <p>{error.message}</p> : null}
+            {isLoading ? <p>Loading...</p> : null}
           </div>
         )}
-        {isLoading && <p>Loading...</p>}
-        {error && <p>Error: {error.message}</p>}
       </div>
     );
   }
-  
   
   }
   
