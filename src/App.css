@@ -82,20 +82,12 @@
 
 /*create css for the form*/
 
-.form{
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/*create css for the form*/
-
-.form{
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
+form {
+  background: radial-gradient(circle, #fff 20%, transparent 20%),
+              radial-gradient(circle, #fff 20%, transparent 20%);
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .course-name {
