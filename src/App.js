@@ -59,7 +59,7 @@ class App extends Component {
           <h3></h3>
         </header>
         {isLoggedIn ? (
-          <div className="course-info" style={{ color: "#035337", fontSize: "16px" }}>
+          <div className="course-info" >
             <h2>Courses</h2>
             {courses.map((course) => (
               <div key={course.code}>
