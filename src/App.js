@@ -1,3 +1,4 @@
+// Created by Musa Aqeel
 import React, { Component } from 'react';
 import './App.css';
 
@@ -14,12 +15,19 @@ class App extends Component {
     };
   }
 
+// REST API
+
+// handleChange updates the state with the value of the input field
+// that triggered the event
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
     });
   };
-// REST API
+// handleSubmit sends a POST request to the specified API with the
+// username and password in the request body. If the request is 
+// successful, it updates the courses data and sets isLoggedIn to true.
+// If there is an error, it updates the error object in the state.
   handleSubmit = (event) => {
     event.preventDefault();
     this.setState({ isLoading: true });
