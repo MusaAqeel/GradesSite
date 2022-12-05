@@ -87,9 +87,10 @@ class App extends Component {
           </div>
         ) : (
           <div className="login-form">
+            
             <form onSubmit={this.handleSubmit}>
-              <div className="form-field">
-              <label htmlFor="username">Username</label>
+    <div className="form-field">
+      <label htmlFor="username" style={{color: "white"}}>Username</label>
                 <input
                   type="text"
                   id="username"
