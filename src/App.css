@@ -1,5 +1,7 @@
 
-
+body {
+  background-color: rgb(3.1, 1.6, 1.6);
+}
 .App {
   text-align: center;
 }
@@ -17,7 +19,6 @@
 
 
 .App-header {
-  background-color: white;
   min-height: 25vh;
   max-height: 50vh;
   display: flex;
@@ -31,7 +32,7 @@
 
 
 .App-link {
-  color: #969696;
+  color: #000000;
 }
 
 
@@ -39,17 +40,18 @@
 .title {
   font-size: calc(20px + 2vmin); /* alt 36 */
   font-weight: bold;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255); /* this is the new line */
   text-shadow: 0 1px 3px rgba(255, 255, 255, 0.572);
   margin: 0 auto;
-}
+  }
 
 /* css for the input box*/
 .inputBox {
+  background-color: rgb(3.1, 1.6, 1.6);
   width: 100%;
   height: 50px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #080404;
+  border-radius: 0px;
   padding: 10px;
   font-size: 16px;
   outline: none;
@@ -60,7 +62,7 @@
   width: 100%;
   height: 50px;
   border: none;
-  border-radius: 5px;
+  border-radius: 0px;
   background-color: #000;
   color: #fff;
   font-size: 16px;
@@ -71,8 +73,8 @@
 .outputBox {
   width: 100%;
   height: 50px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid  rgb(3.1, 1.6, 1.6);
+  border-radius: 0px;
   padding: 10px;
   font-size: 16px;
   outline: none;
@@ -81,6 +83,7 @@
 /*create css for the container*/
 
 .container {
+  background-color: rgb(3.1, 1.6, 1.6);
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
@@ -117,32 +120,33 @@
   gap: 20px;
   height: 100vh;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif, Arial, Helvetica, sans-serif;
-  background-color: #2e2e2e;
+  background-color:  rgb(3.1, 1.6, 1.6);
 }
 
-input[type="text"],
-input[type="password"] {
+input[type=“text”],
+input[type=“password”] {
   height: 8px;
   border: 2px solid rgba(0, 0, 0, 0.579);
   padding: 10px 20px;
-  border-radius: 5px; 
+  border-radius: 5px;
+  color: white; /* new line */
 }
-
+  
 input[type="submit"] {
   margin-top: 10px;
   cursor: pointer;
   font-size: 8px;
-  background: #555555;
+  background: #55555500;
   border: 1px solid #ffffff;
   color: rgb(255, 255, 255);
 
   padding: 10px 20px;
-  border-radius: 4px; 
+  border-radius: 0px; 
 }
 
 
 input[type="submit"]:hover {
-  background: #434444;
+  background: #000000;
 }
 
 .button-container {
@@ -155,10 +159,11 @@ input[type="submit"]:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgb(143, 143, 143);
+  background-color: rgb(3.1, 1.6, 1.6);
+  border: 2px solid white;
   padding: 2rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.5);
+  border-radius: 0px;
 }
 .form-field::before {
   content: "";
@@ -166,11 +171,11 @@ input[type="submit"]:hover {
   top: 0;
   left: 0;
   right: 0;
-  background: radial-gradient(circle, #fff 20%, transparent 20%),
-              radial-gradient(circle, #fff 20%, transparent 20%);
+  background: radial-gradient(circle, rgb(255, 255, 255)),
+              radial-gradient(circle, rgb(255, 255, 255));
   background-position: 0 0, 10px 10px;
   background-size: 20px 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 0px rgba(0,0,0,0.5);
   transform: translate(-50%, -50%);
 }
 
@@ -182,20 +187,21 @@ input[type="submit"]:hover {
   font-family: Arial, Helvetica, Verdana;
   font-size: 16px;
   padding: 8px 16px;
-  border-radius: 5px;
+  border-radius: px;
   color: #ffffff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  background-color: #fff;
+  box-shadow: 0 0 0px rgba(255, 255, 255, 0.5);
+  border: 2px solid white;
+  background-color:  rgb(0, 0, 0);
   border: 1px solid #ccc;
-  box-shadow: 0 1px 2px rgba(0,0,0,.1);
-  color: #666;
+  box-shadow: 0 0px 0px rgba(255, 255, 255, 0.1);
+  color: rgb(255, 255, 255);
   margin: 0 0 10px;
 }
 
 .form-field input[type="text"]:focus,
 .form-field input[type="password"]:focus {
-  outline: none;
-  border-color: #000000;
+  outline: 2px;
+  border-color: #ffffff;
 }
 
 .form-field input[type="text"]:focus + label,
