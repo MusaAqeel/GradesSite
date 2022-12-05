@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: rgba(128, 128, 128, 0.2); /* Grey with 20% transparency */
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,9 +22,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+  padding: 20px; /* Add padding to create space around the text */
 }
+
 
 
 .App-link {
@@ -159,8 +159,10 @@ input[type="submit"]:hover {
 }
 
 .title {
-  font-size: 25px;
-  margin-bottom: 20px;
+  background-color: rgba(128, 128, 128, 0.2); /* Grey with 20% transparency */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 10px 20px; /* Add padding to the title */
 }
 
 .input-container {
