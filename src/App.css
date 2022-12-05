@@ -159,7 +159,7 @@ input[type="submit"]:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.form-field::before {
+.form-field {
   content: "";
   position: absolute;
   top: 0;
