@@ -19,7 +19,7 @@ class App extends Component {
       [event.target.name]: event.target.value,
     });
   };
-
+// REST API
   handleSubmit = (event) => {
     event.preventDefault();
     this.setState({ isLoading: true });
