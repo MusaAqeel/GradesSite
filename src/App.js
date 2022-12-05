@@ -80,9 +80,13 @@ class App extends Component {
                 {course.overall_mark ?
                   <p className="course-overall-mark">{`Overall Mark: ${course.overall_mark}%`}</p> :
                   <p className="course-overall-mark">{`Grade Not Open for ${course.name || "Course"}`}</p>
+                  
                 }
               </div>
             ))}
+               {/* Compute and display average mark */}
+    <p>Average mark: {totalMarks / courses.length}%</p>
+    
           </div>
         ) : (
           <div className="login-form">
