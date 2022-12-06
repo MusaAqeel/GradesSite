@@ -89,7 +89,7 @@ class App extends Component {
             
             <form onSubmit={this.handleSubmit}>
             <div className="form-field">
-           <label htmlFor="username" style={{color: "white"}}>Username</label>
+           <label htmlFor="username" style={{color: "#F5F5F5"}}>Username</label>
                 <input
                   type="text"
                   id="username"
@@ -101,7 +101,7 @@ class App extends Component {
 
               </div>
               <div className="form-field">
-              <label htmlFor="password" style={{color: "white"}}>Password</label>
+              <label htmlFor="password" style={{color: "#F5F5F5"}}>Password</label>
                 <input
                   type="password"
                   id="password"
