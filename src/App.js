@@ -62,12 +62,12 @@ class App extends Component {
     const { isLoggedIn, isLoading, error, courses } = this.state;
     return (
       <div className="App">
-      <header className="App-header">
-        {/* AonClick event handler to the h1 element */}
-        <h1 className="title" onClick={() => window.location.reload()}>GradesSite</h1>
-        <h3></h3>
-      </header>
-      {isLoggedIn ? (
+        <header className="App-header">
+          {/* Add the cursor: pointer style to the h1 element */}
+          <h1 className="title" onClick={() => window.location.reload()} style={{cursor: "pointer"}}>GradesSite</h1>
+          <h3></h3>
+        </header>
+        {isLoggedIn ? (
           <div className="course-info" >
             <h2>Courses</h2>
             {courses.map((course) => (
