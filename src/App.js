@@ -15,6 +15,7 @@ class App extends Component {
     };
   }
 
+
 // REST API
 
 // handleChange updates the state with the value of the input field
@@ -57,6 +58,25 @@ class App extends Component {
       });
   };
 
+  // Assignment Data
+  //componentDidMount() {
+    //this.setState({ isLoading: true });
+    //fetch('https://api.pegasis.site/public/yrdsb_ta/getmark_v2')
+      //.then((res) => res.json())
+      //.then((data) => {
+        //this.setState({
+          //courses: data,
+          //isLoading: false,
+        //});
+      //})
+      //.catch((error) => {
+        //this.setState({ error, isLoading: false });
+     // });
+  //}
+
+
+
+
   // Render the component
   render() {
     const { isLoggedIn, isLoading, error, courses } = this.state;
@@ -82,7 +102,11 @@ class App extends Component {
                   <p className="course-overall-mark" style={{fontWeight: "bold"}}>{`Overall Mark: ${course.overall_mark}%`}</p> :
                   <p className="course-overall-mark" style={{fontWeight: "bold"}}>{`Grade Not Open for ${course.name || "Course"}`}</p>
                 }
+                
+
               </div>
+
+              
             ))}
           </div>
         ) : (
