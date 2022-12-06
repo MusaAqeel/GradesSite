@@ -27,12 +27,12 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding: 40px; 
+  padding: 100px; 
 }
 
 
 .App-link {
-  color: #252525; /* 252525,  */
+  color: #252525;
 }
 
 
@@ -177,7 +177,8 @@ input[type="submit"]:hover {
               radial-gradient(circle, rgb(255, 255, 255));
   background-position: 0 0, 10px 10px;
   background-size: 20px 20px;
- 
+  box-shadow: 0 0 0px rgba(0,0,0,0.5);
+  transform: translate(-50%, -50%);
 }
 
 .form-field input[type="text"],
