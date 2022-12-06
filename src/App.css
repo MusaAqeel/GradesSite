@@ -27,7 +27,7 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding: 100px; 
+  padding: 40px; 
 }
 
 
@@ -152,6 +152,8 @@ input[type="submit"]:hover {
 }
 
 .button-container {
+  /*add white text*/
+  color: white;
   display: flex;
   justify-content: center;
 }
