@@ -27,12 +27,12 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding: 20px; /* Add padding to create space around the text */
+  padding: 100px; 
 }
 
 
 .App-link {
-  color: #000000;
+  color: #252525;
 }
 
 
@@ -135,7 +135,7 @@ input[type=“password”] {
 input[type="submit"] {
   margin-top: 10px;
   cursor: pointer;
-  font-size: 8px;
+  font-size: 12px;
   background: #55555500;
   border: 1px solid #ffffff;
   color: rgb(255, 255, 255);
@@ -189,7 +189,7 @@ input[type="submit"]:hover {
   font-family: "MagdaCleanBlack", Arial, Helvetica, sans-serif;
   font-size: 16px;
   padding: 8px 16px;
-  border-radius: px;
+
   color: #ffffff;
   box-shadow: 0 0 0px rgba(255, 255, 255, 0.5);
   border: 2px solid white;
