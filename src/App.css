@@ -131,6 +131,11 @@ input[type=“password”] {
   border-radius: 0px;
   color: white; 
 }
+
+input[type="submit"]:hover {
+  background-color: white;
+  color: black;
+}
   
 input[type="submit"] {
   margin-top: 10px;
