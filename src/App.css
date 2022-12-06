@@ -39,7 +39,7 @@ body {
 
 .title {
   font-size: calc(20px + 2vmin); /* alt 36 */
-  font-weight: bold;
+
   color: rgb(255, 255, 255); 
 
   margin: 0 auto;
@@ -123,6 +123,11 @@ body {
   background-color:  rgb(3.1, 1.6, 1.6);
 }
 
+input[type="submit"]:hover {
+  background-color: white;
+  color: black;
+}
+  
 input[type=“text”],
 input[type=“password”] {
   height: 8px;
@@ -132,11 +137,7 @@ input[type=“password”] {
   color: white; 
 }
 
-input[type="submit"]:hover {
-  background-color: white;
-  color: black;
-}
-  
+
 input[type="submit"] {
   margin-top: 10px;
   cursor: pointer;
