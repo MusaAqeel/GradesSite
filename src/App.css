@@ -40,8 +40,8 @@ body {
 .title {
   font-size: calc(20px + 2vmin); /* alt 36 */
   font-weight: bold;
-  color: rgb(255, 255, 255); /* this is the new line */
-  text-shadow: 0 1px 3px rgb(255, 255, 255);
+  color: rgb(255, 255, 255); 
+
   margin: 0 auto;
   }
 
