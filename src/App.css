@@ -62,7 +62,6 @@ body {
   width: 100%;
   height: 50px;
   border: none;
-  border-radius: 0px;
   background-color: #000;
   color: #fff;
   font-size: 16px;
@@ -146,13 +145,12 @@ input[type="submit"] {
   color: rgb(255, 255, 255);
   font-family: "MagdaCleanBlack", Arial, Helvetica, sans-serif;
   padding: 10px 20px;
-  border-radius: 0px; 
 }
 
 
 input[type="submit"]:hover {
   font-family: "MagdaCleanBlack", Arial, Helvetica, sans-serif;
-  background: #000000;
+  background: #ffffff;
   
 }
 
