@@ -1,13 +1,6 @@
 // Created by Musa Aqeel
 import React, { Component } from 'react';
 import './App.css';
-                
-{course.block == "P1" ? course.number = 1 : null}
-{course.block == "P1" ? course.number = 2 : null}
-{course.block == "P3" ? course.number = 3 : null}
-{course.block == "P4" ? course.number = 4 : null}
-
-
 
 class App extends Component {
   constructor(props) {
@@ -110,6 +103,12 @@ class App extends Component {
                   {/* course.block displays as "p1-p4", course.number variable only stores number */}
                   {/* if course.block = p1 then set course.number to 1 */}
 
+                
+                  {course.block == "P1" ? course.number = 1 : null}
+                  {course.block == "P1" ? course.number = 2 : null}
+                  {course.block == "P3" ? course.number = 3 : null}
+                  {course.block == "P4" ? course.number = 4 : null}
+                  
 
 
                   <p className="course-room" style={{fontWeight: "bold"}}>{"Room: " + course.room + " | Block: " + course.number}</p>
