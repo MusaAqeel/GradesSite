@@ -137,39 +137,39 @@ class App extends Component {
               } else {
                 console.log("course code is null")
               }
+              <div className="assignment-info" >
+              <h2>Assignments</h2>
+              {
+                assignments.map((assignment) => {
+                  /* Add the assignment-box class to the <div> element */
+                  return (
+                    <div key={assignment.name} className="assignment-box">
+                      <h3 className="assignment-name" style={{fontWeight: "bold"}}>{assignment.name}</h3>
+                      <p className="assignment-feedback" style={{color: "gray"}}>{assignment.feedback}</p>
+            
+                      {/* Display the marks for each KU, F, O, A, C, T category */}
+                      {
+                        Object.keys(assignment).forEach((category) => {
+                          if (category !== "name" && category !== "feedback") {
+                            return (
+                              <div key={category} className="assignment-category">
+                                <h4 className="assignment-category-name" style={{fontWeight: "bold"}}>{category}</h4>
+                                <p className="assignment-category-marks" style={{color: "blue"}}>{`Marks: ${assignment[category].get}/${assignment[category].total}`}</p>
+                              </div>
+                            );
+                          }
+                        })
+                      }
+                    </div>
+                  );
+                })
+              }
+            </div>
               
     
                   
 
             })}
-                        <div className="assignment-info" >
-  <h2>Assignments</h2>
-  {
-    assignments.map((assignment) => {
-      /* Add the assignment-box class to the <div> element */
-      return (
-        <div key={assignment.name} className="assignment-box">
-          <h3 className="assignment-name" style={{fontWeight: "bold"}}>{assignment.name}</h3>
-          <p className="assignment-feedback" style={{color: "gray"}}>{assignment.feedback}</p>
-
-          {/* Display the marks for each KU, F, O, A, C, T category */}
-          {
-            Object.keys(assignment).forEach((category) => {
-              if (category !== "name" && category !== "feedback") {
-                return (
-                  <div key={category} className="assignment-category">
-                    <h4 className="assignment-category-name" style={{fontWeight: "bold"}}>{category}</h4>
-                    <p className="assignment-category-marks" style={{color: "blue"}}>{`Marks: ${assignment[category].get}/${assignment[category].total}`}</p>
-                  </div>
-                );
-              }
-            })
-          }
-        </div>
-      );
-    })
-  }
-</div>
             
 
           </div>
