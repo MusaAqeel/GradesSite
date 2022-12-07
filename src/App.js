@@ -100,10 +100,9 @@ class App extends Component {
                   <p className="course-teacher" style={{color: "gray"}}>{course.teacher}</p>
                   <p className="course-mark" style={{color: "blue"}}>{course.mark}</p>
                   <p className="course-code" style={{fontStyle: "italic"}}>{course.code}</p>
+                  
                   {/* course.block displays as "p1-p4", course.number variable only stores number */}
                   {/* if course.block = p1 then set course.number to 1 */}
-
-                
                   {course.block == "P1" ? course.number = 1 : null}
                   {course.block == "P1" ? course.number = 2 : null}
                   {course.block == "P3" ? course.number = 3 : null}
