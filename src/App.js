@@ -100,15 +100,7 @@ class App extends Component {
                   <p className="course-teacher" style={{color: "gray"}}>{course.teacher}</p>
                   <p className="course-mark" style={{color: "blue"}}>{course.mark}</p>
                   <p className="course-code" style={{fontStyle: "italic"}}>{course.code}</p>
-                  {/* course.block displays as "p1-p4", course.number variable only stores number */}
-      
-                  {course.block == "p1" ? course.number = 1 : null}
-                  {course.block == "p2" ? course.number = 2 : null}
-                  {course.block == "p3" ? course.number = 3 : null}
-                  {course.block == "p4" ? course.number = 4 : null}
-
-
-                  <p className="course-room" style={{fontWeight: "bold"}}>{"Room: " + course.room + " | Block: " + course.number}</p>
+                  <p className="course-room" style={{fontWeight: "bold"}}>{"Room: " + course.room + " | Block: " + course.block}</p>
 
                   {course.overall_mark ?
                     <p className="course-overall-mark" style={{fontWeight: "bold", fontFamily: 'Helvetica'}}>{`Overall Mark: ${course.overall_mark.toFixed(1)}%`}</p> :
