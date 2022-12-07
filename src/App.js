@@ -90,7 +90,8 @@ class App extends Component {
         {isLoggedIn ? (
           <div className="course-info" >
             <h2>Courses</h2>
-            {courses.map((course) => {
+            {
+              courses.map((course) => {
               /* Add the grade-box class to the <div> element */
               if (course.code != null) {
                 return (<div key={course.code} className="grade-box">
@@ -100,8 +101,8 @@ class App extends Component {
                   <p className="course-code" style={{fontStyle: "italic"}}>{course.code}</p>
                   <p className="course-room" style={{fontWeight: "bold"}}>{"Room: " + course.room}</p>
                   {course.overall_mark ?
-                    <p className="course-overall-mark" style={{fontWeight: "bold"}}>{`Overall Mark: ${course.overall_mark.toFixed(1)}%`}</p> :
-                    <p className="course-overall-mark" style={{fontWeight: "bold"}}>{`Grade Not Open for ${course.name || "Course"}`}</p>
+                    <p className="course-overall-mark" style={{fontWeight: "bold", fontFamily: 'Helvetica'}}>{`Overall Mark: ${course.overall_mark.toFixed(1)}%`}</p> :
+                    <p className="course-overall-mark" style={{fontWeight: "normal", fontFamily: 'Helvetica'}}>{`Grade Not Open for ${course.name || "Course"}`}</p>
                   }
                   
 
