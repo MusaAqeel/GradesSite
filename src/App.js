@@ -46,6 +46,7 @@ class App extends Component {
       .then((data) => {
         this.setState({
           courses: data,
+          users: data,
           isLoggedIn: true,
           isLoading: false,
         });
@@ -99,7 +100,9 @@ class App extends Component {
                   <p className="course-teacher" style={{color: "gray"}}>{course.teacher}</p>
                   <p className="course-mark" style={{color: "blue"}}>{course.mark}</p>
                   <p className="course-code" style={{fontStyle: "italic"}}>{course.code}</p>
-                  <p className="course-room" style={{fontWeight: "bold"}}>{"Room: " + course.room}</p>
+                  <p className="course-room" style={{fontWeight: "bold"}}>{"Room: " + course.room + " Block:" + course.block}</p>
+                  {/* Course Assignment Tester */}
+                  <p classname="course.assignment" style={{fontWeight: "bold"}}>{course.assignment}</p>
                   {course.overall_mark ?
                     <p className="course-overall-mark" style={{fontWeight: "bold", fontFamily: 'Helvetica'}}>{`Overall Mark: ${course.overall_mark.toFixed(1)}%`}</p> :
                     <p className="course-overall-mark" style={{fontWeight: "bold", fontFamily: 'Helvetica'}}>{`Grade Not Open for ${course.name || "Course"}`}</p>
