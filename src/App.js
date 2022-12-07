@@ -93,6 +93,23 @@ class App extends Component {
             <h2>Courses</h2>
             {
               courses.map((course) => {
+            /* Set the value of course.number based on the value of course.block */
+            switch (course.block) {
+              case "P1":
+                course.number = 1;
+                break;
+              case "P2":
+                course.number = 2;
+                break;
+              case "P3":
+                course.number = 3;
+                break;
+              case "P4":
+                course.number = 4;
+                break;
+              default:
+                break;
+    }
               /* Add the grade-box class to the <div> element */
               if (course.code != null) {
                 return (<div key={course.code} className="grade-box">
@@ -103,12 +120,7 @@ class App extends Component {
                   
                   {/* course.block displays as "p1-p4", course.number variable only stores number */}
                   {/* if course.block = p1 then set course.number to 1 */}
-                  {course.block == "P1" ? course.number = 1 : null}
-                  {course.block == "P1" ? course.number = 2 : null}
-                  {course.block == "P3" ? course.number = 3 : null}
-                  {course.block == "P4" ? course.number = 4 : null}
-                  
-
+   
 
                   <p className="course-room" style={{fontWeight: "bold"}}>{"Room: " + course.room + " | Block: " + course.number}</p>
 
