@@ -116,16 +116,23 @@ class App extends Component {
             <h2>Courses</h2>
             {
               courses.map((course) => {
-            /* Splice the number from the block value "p1" -> 1 */
-              
-              /* Add the grade-box class to the <div> element */
-              if (course.code != null) {
-                course.block = course.block.slice(0);
-                if (course.overall_mark) {
-                  data.datasets[0].data[0] = 100-course.overall_mark
-                  data.datasets[0].data[1] = course.overall_mark
-                  console.log(data.datasets[0].data[0], data.datasets[0].data[1]);
-                } 
+            /* Set the value of course.number based on the value of course.block */
+            switch (course.block) {
+              case "P1":
+                course.number = 1;
+                break;
+              case "P2":
+                course.number = 2;
+                break;
+              case "P3":
+                course.number = 3;
+                break;
+              case "P4":
+                course.number = 4;
+                break;
+              default:
+                break;
+              }
                 return (<div key={course.code} className="grade-box">
                   <h3 className="course-name" style={{fontWeight: "bold"}}>{course.name || "Course"}</h3>
                   <p className="course-teacher" style={{color: "gray"}}>{course.teacher}</p>
@@ -139,7 +146,7 @@ class App extends Component {
                   {/* if course.block = p1 then set course.number to 1 */}
    
 
-                  <p className="course-room" style={{fontWeight: "bold"}}>{"Room: " + course.room + " | Block: " + course.block}</p>
+                  <p className="course-room" style={{fontWeight: "bold"}}>{"Room: " + course.room + " | Period: " + course.block}</p>
 
                   {course.overall_mark ?
                     <p className="course-overall-mark" style={{fontWeight: "bold", fontFamily: 'Helvetica'}}>{`Overall Mark: ${course.overall_mark.toFixed(1)}%`}</p> :
