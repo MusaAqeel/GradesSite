@@ -201,6 +201,7 @@ input[type="submit"]:hover {
   font-family: "MagdaCleanBlack", Arial, Helvetica, sans-serif;
   font-size: 16px;
   padding: 8px 16px;
+  border-radius: 5px;
 
   color: #F5F5F5;
   box-shadow: 0 0 0px rgba(255, 255, 255, 0.5);
