@@ -109,7 +109,7 @@ class App extends Component {
                 break;
               default:
                 break;
-    }
+              }
               /* Add the grade-box class to the <div> element */
               if (course.code != null) {
                 return (<div key={course.code} className="grade-box">
