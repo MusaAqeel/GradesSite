@@ -128,20 +128,7 @@ class App extends Component {
                     <p className="course-overall-mark" style={{fontWeight: "bold", fontFamily: 'Helvetica'}}>{`Overall Mark: ${course.overall_mark.toFixed(1)}%`}</p> :
                     <p className="course-overall-mark" style={{fontWeight: "bold", fontFamily: 'Helvetica'}}>{`Grade Not Open for ${course.name || "Course"}`}</p>
                   }
-                  
-
-                </div>);
-
-
-              } else {
-                console.log("course code is null")
-              }
-              
-    
-                  
-
-            })}
-            <div className="assignment-info" >
+                  <div className="assignment-info" >
   <h2>Assignments</h2>
   {
     assignments.map((assignment) => {
@@ -170,6 +157,20 @@ class App extends Component {
   }
 </div>
 
+
+                </div>);
+                
+
+
+              } else {
+                console.log("course code is null")
+              }
+              
+    
+                  
+
+            })}
+            
           </div>
           
           
