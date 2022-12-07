@@ -89,88 +89,81 @@ class App extends Component {
           <h3></h3>
         </header>
         {isLoggedIn ? (
-          <div className="course-info" >
+          <><div className="course-info">
             <h2>Courses</h2>
-            {
-              courses.map((course) => {
-            /* Set the value of course.number based on the value of course.block */
-            switch (course.block) {
-              case "P1":
-                course.number = 1;
-                break;
-              case "P2":
-                course.number = 2;
-                break;
-              case "P3":
-                course.number = 3;
-                break;
-              case "P4":
-                course.number = 4;
-                break;
-              default:
-                break;
+            {courses.map((course) => {
+              /* Set the value of course.number based on the value of course.block */
+              switch (course.block) {
+                case "P1":
+                  course.number = 1;
+                  break;
+                case "P2":
+                  course.number = 2;
+                  break;
+                case "P3":
+                  course.number = 3;
+                  break;
+                case "P4":
+                  course.number = 4;
+                  break;
+                default:
+                  break;
               }
               /* Add the grade-box class to the <div> element */
               if (course.code != null) {
                 return (<div key={course.code} className="grade-box">
-                  <h3 className="course-name" style={{fontWeight: "bold"}}>{course.name || "Course"}</h3>
-                  <p className="course-teacher" style={{color: "gray"}}>{course.teacher}</p>
-                  <p className="course-mark" style={{color: "blue"}}>{course.mark}</p>
-                  <p className="course-code" style={{fontStyle: "italic"}}>{course.code}</p>
-                  
+                  <h3 className="course-name" style={{ fontWeight: "bold" }}>{course.name || "Course"}</h3>
+                  <p className="course-teacher" style={{ color: "gray" }}>{course.teacher}</p>
+                  <p className="course-mark" style={{ color: "blue" }}>{course.mark}</p>
+                  <p className="course-code" style={{ fontStyle: "italic" }}>{course.code}</p>
+
                   {/* course.block displays as "p1-p4", course.number variable only stores number */}
                   {/* if course.block = p1 then set course.number to 1 */}
-   
 
-                  <p className="course-room" style={{fontWeight: "bold"}}>{"Room: " + course.room + " | Block: " + course.number}</p>
+
+                  <p className="course-room" style={{ fontWeight: "bold" }}>{"Room: " + course.room + " | Block: " + course.number}</p>
 
                   {course.overall_mark ?
-                    <p className="course-overall-mark" style={{fontWeight: "bold", fontFamily: 'Helvetica'}}>{`Overall Mark: ${course.overall_mark.toFixed(1)}%`}</p> :
-                    <p className="course-overall-mark" style={{fontWeight: "bold", fontFamily: 'Helvetica'}}>{`Grade Not Open for ${course.name || "Course"}`}</p>
-                  }
-                  <div className="assignment-info" >
-  <h2>Assignments</h2>
-  {
-    assignments.map((assignment) => {
-      /* Add the assignment-box class to the <div> element */
-      return (
-        <div key={assignment.name} className="assignment-box">
-          <h3 className="assignment-name" style={{fontWeight: "bold"}}>{assignment.name}</h3>
-          <p className="assignment-feedback" style={{color: "gray"}}>{assignment.feedback}</p>
+                    <p className="course-overall-mark" style={{ fontWeight: "bold", fontFamily: 'Helvetica' }}>{`Overall Mark: ${course.overall_mark.toFixed(1)}%`}</p> :
+                    <p className="course-overall-mark" style={{ fontWeight: "bold", fontFamily: 'Helvetica' }}>{`Grade Not Open for ${course.name || "Course"}`}</p>}
 
-          {/* Display the marks for each KU, F, O, A, C, T category */}
-          {
-            Object.keys(assignment).forEach((category) => {
-              if (category !== "name" && category !== "feedback") {
-                return (
-                  <div key={category} className="assignment-category">
-                    <h4 className="assignment-category-name" style={{fontWeight: "bold"}}>{category}</h4>
-                    <p className="assignment-category-marks" style={{color: "blue"}}>{`Marks: ${assignment[category].get}/${assignment[category].total}`}</p>
-                  </div>
-                );
-              }
-            })
-          }
-        </div>
-      );
-    })
-  }
-</div>
-
-                  
 
                 </div>);
 
 
               } else {
-                console.log("course code is null")
+                console.log("course code is null");
               }
-              
-    
-                  
+
+
+
 
             })}
-          </div>
+          </div><div className="assignment-info">
+              <h2>Assignments</h2>
+              {assignments.map((assignment) => {
+                /* Add the assignment-box class to the <div> element */
+                return (
+                  <div key={assignment.name} className="assignment-box">
+                    <h3 className="assignment-name" style={{ fontWeight: "bold" }}>{assignment.name}</h3>
+                    <p className="assignment-feedback" style={{ color: "gray" }}>{assignment.feedback}</p>
+
+                    {/* Display the marks for each KU, F, O, A, C, T category */}
+                    {Object.keys(assignment).forEach((category) => {
+                      if (category !== "name" && category !== "feedback") {
+                        return (
+                          <div key={category} className="assignment-category">
+                            <h4 className="assignment-category-name" style={{ fontWeight: "bold" }}>{category}</h4>
+                            <p className="assignment-category-marks" style={{ color: "blue" }}>{`Marks: ${assignment[category].get}/${assignment[category].total}`}</p>
+                          </div>
+                        );
+                      }
+                    })}
+                  </div>
+                );
+              })}
+            </div></>
+        
           
 
         
