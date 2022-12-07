@@ -80,7 +80,7 @@ class App extends Component {
 
   // Render the component
   render() {
-    const { isLoggedIn, isLoading, error, courses, assignments} = this.state;
+    const { isLoggedIn, isLoading, error, courses, assignmentsZZ} = this.state;
     return (
       <div className="App">
         <header className="App-header">
@@ -142,8 +142,7 @@ class App extends Component {
                   
 
             })}
-            
-            <div className="assignment-info" >
+                        <div className="assignment-info" >
   <h2>Assignments</h2>
   {
     assignments.map((assignment) => {
@@ -171,13 +170,16 @@ class App extends Component {
     })
   }
 </div>
+            
 
           </div>
+          
           
           
 
         
         ) : (
+          
 
           
 
