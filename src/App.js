@@ -102,7 +102,7 @@ class App extends Component {
                   <p className="course-room" style={{fontWeight: "bold"}}>{"Room: " + course.room}</p>
                   {course.overall_mark ?
                     <p className="course-overall-mark" style={{fontWeight: "bold", fontFamily: 'Helvetica'}}>{`Overall Mark: ${course.overall_mark.toFixed(1)}%`}</p> :
-                    <p className="course-overall-mark" style={{fontWeight: "normal", fontFamily: 'Helvetica'}}>{`Grade Not Open for ${course.name || "Course"}`}</p>
+                    <p className="course-overall-mark" style={{fontWeight: "bold", fontFamily: 'Helvetica'}}>{`Grade Not Open for ${course.name || "Course"}`}</p>
                   }
                   
 
