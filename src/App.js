@@ -133,7 +133,6 @@ class App extends Component {
                 </div>);
 
 
-
               } else {
                 console.log("course code is null")
               }
@@ -176,6 +175,8 @@ class App extends Component {
         
         ) : (
 
+          
+
       
           <div className="login-form">
             
@@ -214,7 +215,9 @@ class App extends Component {
         )}
       </div>
     );
+
   }
+  
   
   }
   
