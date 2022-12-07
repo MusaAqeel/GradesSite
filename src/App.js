@@ -150,8 +150,8 @@ class App extends Component {
                 <input type="submit" value="Submit" />
               </div>
             </form>
-            {error ? <p>{error.message}</p> : null}
-            {isLoading ? <p>Loading...</p> : null}
+            {error ? <p style={{color: 'white'}}>{error.message}</p> : null}
+            {isLoading ? <p style={{color: 'white'}}>Loading...</p> : null}
           </div>
         )}
       </div>
