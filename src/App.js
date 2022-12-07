@@ -90,24 +90,29 @@ class App extends Component {
         {isLoggedIn ? (
           <div className="course-info" >
             <h2>Courses</h2>
-            {courses.map((course) => (
+            {courses.map((course) => {
               /* Add the grade-box class to the <div> element */
-              <div key={course.code} className="grade-box">
-                <h3 className="course-name" style={{fontWeight: "bold"}}>{course.name || "Course"}</h3>
-                <p className="course-teacher" style={{color: "gray"}}>{course.teacher}</p>
-                <p className="course-mark" style={{color: "blue"}}>{course.mark}</p>
-                <p className="course-code" style={{fontStyle: "italic"}}>{course.code}</p>
-                <p className="course-room" style={{fontWeight: "bold"}}>{"Room: " + course.room}</p>
-                {course.overall_mark ?
-                  <p className="course-overall-mark" style={{fontWeight: "bold"}}>{`Overall Mark: ${course.overall_mark.toFixed(1)}%`}</p> :
-                  <p className="course-overall-mark" style={{fontWeight: "bold"}}>{`Grade Not Open for ${course.name || "Course"}`}</p>
-                }
-                
+              if (course.code != null) {
+                return (<div key={course.code} className="grade-box">
+                  <h3 className="course-name" style={{fontWeight: "bold"}}>{course.name || "Course"}</h3>
+                  <p className="course-teacher" style={{color: "gray"}}>{course.teacher}</p>
+                  <p className="course-mark" style={{color: "blue"}}>{course.mark}</p>
+                  <p className="course-code" style={{fontStyle: "italic"}}>{course.code}</p>
+                  <p className="course-room" style={{fontWeight: "bold"}}>{"Room: " + course.room}</p>
+                  {course.overall_mark ?
+                    <p className="course-overall-mark" style={{fontWeight: "bold"}}>{`Overall Mark: ${course.overall_mark.toFixed(1)}%`}</p> :
+                    <p className="course-overall-mark" style={{fontWeight: "bold"}}>{`Grade Not Open for ${course.name || "Course"}`}</p>
+                  }
+                  
 
-              </div>
-
+                </div>);
+              } else {
+                console.log("course code is null")
+              }
               
-            ))}
+              
+              
+            })}
           </div>
         ) : (
           <div className="login-form">
