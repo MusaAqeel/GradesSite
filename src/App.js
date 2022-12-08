@@ -19,6 +19,7 @@ const data = {
         'rgba(24, 163, 68, 1)',
       ],
       borderWidth: 1,
+      
     },
   ],
 };
@@ -155,7 +156,7 @@ class App extends Component {
                   
                   {/* course.block displays as "p1-p4", course.number variable only stores number */}
                   {/* if course.block = p1 then set course.number to 1 */}
-
+                  
                   
    
 

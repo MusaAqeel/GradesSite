@@ -227,7 +227,7 @@ input[type="submit"]:hover {
   font-size: 12px;
   color: #000000;
 }
-
+/* ffi */
 .form-field input[type="text"]:valid + label,
 .form-field input[type="number"]:valid + label,
 .form-field input[type="password"]:valid + label {
