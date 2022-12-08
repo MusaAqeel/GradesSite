@@ -25,12 +25,14 @@ const data = {
   ],
 };
 
+ChartJS.register(ArcElement);
 const options = {
   center: {
     text: `Overall Mark: ${course.overall_mark.toFixed(1)}%`,
     color: '#FFFFF', // Replace with the desired color for the text
   },
 };
+
 
 
 
