@@ -1,4 +1,4 @@
-// Created by Musa Aqeel
+// Created by Musa Aqeel & Daniel Martinez
 import React, { Component } from 'react';
 import './App.css';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
@@ -102,6 +102,7 @@ class App extends Component {
   // Render the component
   render() {
     const { isLoggedIn, isLoading, error, courses, assignments} = this.state;
+    console.log("assignments", assignments)
     return (
       
       <div className="App">
@@ -138,7 +139,7 @@ class App extends Component {
               }
               /* Add the grade-box class to the <div> element */
               if (course.code != null) {
-                course.block = course.block.slice(0);
+                course.block.slice(0);
                 if (course.overall_mark) {
                   data.datasets[0].data[0] = 100-course.overall_mark
                   data.datasets[0].data[1] = course.overall_mark
