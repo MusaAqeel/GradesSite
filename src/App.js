@@ -3,10 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
-
 import Logo from './logo.png';
-
-
 
 ChartJS.register(ArcElement);
 const data = {
@@ -25,9 +22,6 @@ const data = {
     },
   ],
 };
-
-
-
 
 class App extends Component {
   constructor(props) {
@@ -107,12 +101,7 @@ class App extends Component {
 
   // Render the component
   render() {
-    const { isLoggedIn, isLoading, error, courses, assignments, }  = this.state;
-
-    // Create the data object for the doughnut chart
-
-
-    
+    const { isLoggedIn, isLoading, error, courses, assignments} = this.state;
     return (
       
       <div className="App">
@@ -127,37 +116,6 @@ class App extends Component {
             <h2>Courses</h2>
             {
               courses.map((course) => {
-        // Create the data object for the doughnut chart
-        const data = {
-          datasets: [
-            {
-              data: [15, 85],
-              backgroundColor: [
-                'rgba(171, 171, 171, 0.2)',
-                'rgba(54, 235, 151, 0.2)',
-              ],
-              borderColor: [
-                'rgba(125, 125, 125, 1)',
-                'rgba(24, 163, 68, 1)',
-              ],
-              borderWidth: 1,
-            },
-          ],
-        };
-
-        // Create the options object for the doughnut chart
-        const options = {
-          cutoutPercentage: 80,
-          elements: {
-            center: {
-              text: `${course.overall_mark}%`,
-              color: '#000000', // Default is #000000
-              fontStyle: 'Arial', // Default is Arial
-              sidePadding: 20 // Defualt is 20 (as a percentage)
-            }
-          }
-        };
-
             /* Splice the number from the block value "p1" -> 1 */
               
               
@@ -189,8 +147,6 @@ class App extends Component {
                 return (<div key={course.code} className="grade-box">
                   <h3 className="course-name" style={{fontWeight: "bold"}}>{course.name || "Course"}</h3>
                   <p className="course-teacher" style={{color: "gray"}}>{course.teacher}</p>
-
-                  <Doughnut options={options} data={data} />
 
                   {course.overall_mark ? <Doughnut data={data} style={{width:"60vmin", maxWidth: "300px", margin: '0 auto'}}/> : false }
 
