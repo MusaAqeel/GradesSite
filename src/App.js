@@ -108,18 +108,6 @@ class App extends Component {
   // Render the component
   render() {
     const { isLoggedIn, isLoading, error, courses, assignments} = this.state;
-    const options = {
-      cutoutPercentage: 80,
-      elements: {
-        center: {
-          text: `${course.overall_mark}%`,
-          color: '#000000', // Default is #000000
-          fontStyle: 'Arial', // Default is Arial
-          sidePadding: 20 // Defualt is 20 (as a percentage)
-        }
-      }
-    };
-    
     return (
       
       <div className="App">
@@ -167,7 +155,6 @@ class App extends Component {
                   <p className="course-teacher" style={{color: "gray"}}>{course.teacher}</p>
 
                   {course.overall_mark ? <Doughnut data={data} style={{width:"60vmin", maxWidth: "300px", margin: '0 auto'}}/> : false }
-                  <Doughnut options={options} data={data} />
 
                   <p className="course-mark" style={{color: "blue"}}>{course.mark}</p>
                   <p className="course-code" style={{fontStyle: "italic"}}>{course.code}</p>
