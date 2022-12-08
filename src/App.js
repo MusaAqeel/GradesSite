@@ -108,6 +108,25 @@ class App extends Component {
   // Render the component
   render() {
     const { isLoggedIn, isLoading, error, courses, assignments} = this.state;
+
+    // Create the data object for the doughnut chart
+    const data = {
+      datasets: [
+        {
+          data: [15, 85],
+          backgroundColor: [
+            'rgba(171, 171, 171, 0.2)',
+            'rgba(54, 235, 151, 0.2)',
+          ],
+          borderColor: [
+            'rgba(125, 125, 125, 1)',
+            'rgba(24, 163, 68, 1)',
+          ],
+          borderWidth: 1,
+        },
+      ],
+    };
+    
     return (
       
       <div className="App">
