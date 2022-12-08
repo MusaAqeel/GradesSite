@@ -12,7 +12,7 @@ const data = {
       data: [15, 85],
       backgroundColor: [
         'rgba(171, 171, 171, 0.2)',
-        'rgba(54, 235, 151, 0.2)',
+        'rgba(32, 33, 36, 0.2)',
       ],
       borderColor: [
         'rgba(125, 125, 125, 1)',
@@ -206,7 +206,7 @@ class App extends Component {
                   required
                 />
 
-              </div>
+              </div>\
               <div className="form-field">
               <label htmlFor="password" style={{color: "#F5F5F5"}}>Password</label>
                 <input
@@ -225,7 +225,7 @@ class App extends Component {
                 <input type="submit" value="Submit" />
               </div>
             </form>
-            {error ? <p style={{color: 'white'}}>{error.message == "Unexpected end of JSON input" ? "There is a mistake in your username/password" : error.message}</p> : null}
+            {error ? <p style={{color: 'white'}}>{error.message == "Unexpected end of JSON input" ? "There is a mistake in your Username/Password" : error.message}</p> : null}
             {isLoading ? <p style={{color: 'white'}}>Loading...</p> : null}
           </div>
         )}
