@@ -32,7 +32,6 @@ const options = {
   },
 };
 
-<Doughnut options={options} data={data} />
 
 
 class App extends Component {
