@@ -160,7 +160,7 @@ class App extends Component {
                   <h3 className="course-name" style={{fontWeight: "bold"}}>{course.name || "Course"}</h3>
                   <p className="course-teacher" style={{color: "gray"}}>{course.teacher}</p>
 
-                  {course.overall_mark ? <Doughnut data={data} options={options} style={{width:"60vmin", maxWidth: "300px", margin: '0 auto'}}/> : false }
+                  {course.overall_mark ? <Doughnut data={data} style={{width:"60vmin", maxWidth: "300px", margin: '0 auto'}}/> : false }
 
                   <p className="course-mark" style={{color: "blue"}}>{course.mark}</p>
                   <p className="course-code" style={{fontStyle: "italic"}}>{course.code}</p>
