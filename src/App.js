@@ -1,4 +1,4 @@
-// Created by Musa Aqeel & Daniel Martinez
+// Created by Musa Aqeel
 import React, { Component } from 'react';
 import './App.css';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
@@ -12,7 +12,7 @@ const data = {
       data: [15, 85],
       backgroundColor: [
         'rgba(171, 171, 171, 0.2)',
-        'rgba(32, 33, 36, 0.2)',
+        'rgba(245, 245, 245, 0.2)',
       ],
       borderColor: [
         'rgba(125, 125, 125, 1)',
@@ -102,7 +102,6 @@ class App extends Component {
   // Render the component
   render() {
     const { isLoggedIn, isLoading, error, courses, assignments} = this.state;
-    console.log("assignments", assignments)
     return (
       
       <div className="App">
@@ -139,7 +138,7 @@ class App extends Component {
               }
               /* Add the grade-box class to the <div> element */
               if (course.code != null) {
-                course.block.slice(0);
+                course.block = course.block.slice(0);
                 if (course.overall_mark) {
                   data.datasets[0].data[0] = 100-course.overall_mark
                   data.datasets[0].data[1] = course.overall_mark
@@ -207,7 +206,7 @@ class App extends Component {
                   required
                 />
 
-              </div>\
+              </div>
               <div className="form-field">
               <label htmlFor="password" style={{color: "#F5F5F5"}}>Password</label>
                 <input
