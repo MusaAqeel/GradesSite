@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
+
 import Logo from './logo.png';
 
 
@@ -23,14 +24,6 @@ const data = {
       borderWidth: 1,
     },
   ],
-};
-
-ChartJS.register(ArcElement);
-const options = {
-  center: {
-    text: `Overall Mark: ${course.overall_mark.toFixed(1)}%`,
-    color: '#FFFFF', // Replace with the desired color for the text
-  },
 };
 
 
