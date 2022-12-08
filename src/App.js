@@ -5,6 +5,8 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import Logo from './logo.png';
 
+
+
 ChartJS.register(ArcElement);
 const data = {
   datasets: [
@@ -22,6 +24,16 @@ const data = {
     },
   ],
 };
+
+const options = {
+  center: {
+    text: `Overall Mark: ${course.overall_mark.toFixed(1)}%`,
+    color: '#FFFFF', // Replace with the desired color for the text
+  },
+};
+
+<Doughnut options={options} data={data} />
+
 
 class App extends Component {
   constructor(props) {
@@ -148,7 +160,7 @@ class App extends Component {
                   <h3 className="course-name" style={{fontWeight: "bold"}}>{course.name || "Course"}</h3>
                   <p className="course-teacher" style={{color: "gray"}}>{course.teacher}</p>
 
-                  {course.overall_mark ? <Doughnut data={data} style={{width:"60vmin", maxWidth: "300px", margin: '0 auto'}}/> : false }
+                  {course.overall_mark ? <Doughnut data={data} options={options} style={{width:"60vmin", maxWidth: "300px", margin: '0 auto'}}/> : false }
 
                   <p className="course-mark" style={{color: "blue"}}>{course.mark}</p>
                   <p className="course-code" style={{fontStyle: "italic"}}>{course.code}</p>
